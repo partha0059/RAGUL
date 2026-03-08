@@ -14,6 +14,7 @@ import orihime from "../assets/orihime.jpg";
 const Home = () => {
     // ------------------- Hooks 
     const [Active, SetActive] = useState(true)
+    const [showPromiseMobile, setShowPromiseMobile] = useState(false);
 
     useEffect(() => {
         let datetxt = "9 March 2005";
@@ -181,7 +182,8 @@ const Home = () => {
                 </section>
 
                 {/* ========================== Promise Note ========================= */}
-                <div className="absolute md:bottom-4 bottom-[100px] md:right-8 right-2 z-50 flex justify-center w-full md:w-auto" style={{ "--t": "16s", animation: "fadeInUp 1s ease forwards", animationDelay: "16s", opacity: 0 }}>
+                {/* Desktop View: Static Card */}
+                <div className="hidden md:block absolute bottom-4 right-8 z-50" style={{ "--t": "16s", animation: "fadeInUp 1s ease forwards", animationDelay: "16s", opacity: 0 }}>
                     <div style={{
                         background: 'linear-gradient(135deg, #fff5f5, #ffe0e0)',
                         border: '2px solid #e53e3e',
@@ -192,36 +194,60 @@ const Home = () => {
                         fontFamily: '"Sriracha", cursive',
                         position: 'relative',
                     }}>
-                        <div style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '6px',
-                            marginBottom: '8px',
-                            color: '#e53e3e',
-                            fontWeight: 'bold',
-                            fontSize: '15px',
-                        }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px', color: '#e53e3e', fontWeight: 'bold', fontSize: '15px' }}>
                             <span style={{ fontSize: '18px' }}>❤️‍🔥</span> My Promise
                         </div>
-                        <p style={{
-                            margin: 0,
-                            fontSize: '13px',
-                            color: '#4a2020',
-                            lineHeight: '1.5',
-                        }}>
+                        <p style={{ margin: 0, fontSize: '13px', color: '#4a2020', lineHeight: '1.5' }}>
                             Next time, I will celebrate your birthday right in front of you. That's my promise. I love you, Srudhi. ❤️
                         </p>
-                        <p style={{
-                            margin: '6px 0 0 0',
-                            fontSize: '12px',
-                            color: '#e53e3e',
-                            textAlign: 'right',
-                            fontStyle: 'italic',
-                        }}>
+                        <p style={{ margin: '6px 0 0 0', fontSize: '12px', color: '#e53e3e', textAlign: 'right', fontStyle: 'italic' }}>
                             — Sarathi
                         </p>
                     </div>
                 </div>
+
+                {/* Mobile View: Floating Icon */}
+                <div className="md:hidden fixed bottom-6 left-6 z-[100]" style={{ animation: "fadeInUp 1s ease forwards", animationDelay: "16s", opacity: 0 }}>
+                    <button
+                        onClick={() => setShowPromiseMobile(true)}
+                        className="w-14 h-14 bg-[#e53e3e] rounded-full flex items-center justify-center shadow-lg border-2 border-white animate-bounce"
+                        style={{ color: 'white', fontSize: '24px' }}
+                    >
+                        ❤️‍🔥
+                    </button>
+                </div>
+
+                {/* Mobile Popup Overlay */}
+                {showPromiseMobile && (
+                    <div className="md:hidden fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={() => setShowPromiseMobile(false)}>
+                        <div className="relative w-full max-w-[300px]" onClick={e => e.stopPropagation()} style={{ animation: "scaleIn 0.3s ease-out" }}>
+                            <div style={{
+                                background: 'linear-gradient(135deg, #fff5f5, #ffe0e0)',
+                                border: '2px solid #e53e3e',
+                                borderRadius: '16px',
+                                padding: '24px 20px',
+                                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
+                                fontFamily: '"Sriracha", cursive',
+                            }}>
+                                <button
+                                    onClick={() => setShowPromiseMobile(false)}
+                                    className="absolute -top-3 -right-3 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-bold border-2 border-white"
+                                >
+                                    ✕
+                                </button>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px', color: '#e53e3e', fontWeight: 'bold', fontSize: '18px' }}>
+                                    <span style={{ fontSize: '22px' }}>❤️‍🔥</span> My Promise
+                                </div>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#4a2020', lineHeight: '1.6' }}>
+                                    Next time, I will celebrate your birthday right in front of you. That's my promise. I love you, Srudhi. ❤️
+                                </p>
+                                <p style={{ margin: '12px 0 0 0', fontSize: '14px', color: '#e53e3e', textAlign: 'right', fontStyle: 'italic' }}>
+                                    — Sarathi
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
         </>
     );
