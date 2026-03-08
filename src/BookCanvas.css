@@ -470,45 +470,39 @@
 
 
 
-@media screen and (max-width: 658px) {
+@media screen and (max-width: 768px) {
     .boxMail .boxMail-container {
-        position: absolute;
-        width: 650px;
+        width: 750px;
         height: 500px;
-        display: flex;
-        margin: 0;
-        transform: scale(0.9);
-        -webkit-perspective: 2000px;
-        perspective: 2000px;
-    }
-
-    .boxMail .boxMail-container:hover {
-        transform: rotate(-5deg);
-        filter: drop-shadow(0 0 10px #FF7882);
+        transform: scale(0.65);
     }
 
     .boxMail .boxMail-container:hover .card1 {
-        transform: translate(-160px, -250px) rotateY(-140deg);
+        transform: translate(-187px, -250px) rotateY(-140deg);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .boxMail .boxMail-container {
+        width: 750px;
+        height: 500px;
+        transform: scale(0.42);
+    }
+
+    .boxMail .boxMail-container:hover .card1 {
+        transform: translate(-187px, -250px) rotateY(-140deg);
     }
 
     .boxMail .boxMail-container .card2 h3 {
-        font-family: 'Dancing Script', cursive;
-        font-size: 28px;
-        margin-bottom: 15px;
+        font-size: 24px;
     }
 
     .boxMail .boxMail-container .card2 .card2-message-text {
-        font-family: "Sriracha", "cursive";
-        padding: 10px 0;
-        font-size: 16px;
-        line-height: 1.6;
-        flex-grow: 1;
-        overflow-y: auto;
-        text-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+        font-size: 14px !important;
+        line-height: 1.4 !important;
     }
+}
 
-    .boxMail .boxMail-container .card2 .signature {
-        font-size: 20px;
-    }
-
+.boxMail .boxMail-container .card2 .signature {
+    font-size: 20px;
 }

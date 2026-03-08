@@ -916,60 +916,35 @@ body {
     }
 
     .decorate_flower--two {
-        top: 585px;
-        left: 20px;
+        display: none;
     }
 
     .decorate_flower--three {
-        top: 320px;
-        right: 25px;
+        display: none;
     }
 
-    .decorate_star.star1 {
-        top: 45px;
-        left: 200px;
-    }
-
-    .decorate_star.star2 {
-        top: 10px;
-        right: 20px;
-    }
-
-    .decorate_star.star3 {
-        top: 300px;
-        left: 30px;
-    }
-
-    .decorate_star.star4 {
-        bottom: 60px;
-        left: 35px;
-    }
-
+    .decorate_star.star3,
     .decorate_star.star5 {
-        bottom: 140px;
-        left: 500px;
+        display: none;
     }
 
     .smiley__icon {
-        bottom: 330px;
+        bottom: 250px;
         left: 10px;
-        width: 50px;
+        width: 40px;
     }
 
     .right .balloon_two {
         position: absolute;
         top: 60px;
-        right: -65px;
+        right: -30px;
     }
 
-    #btn__letter {
-        margin-top: 15px;
-        width: 200px;
-    }
-
+    #btn__letter,
     #FromRexon {
-        margin-top: 10px;
-        width: 200px;
+        margin-top: 15px;
+        width: 180px;
+        font-size: 14px;
     }
 }
 

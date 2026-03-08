@@ -181,13 +181,13 @@ const Home = () => {
                 </section>
 
                 {/* ========================== Promise Note ========================= */}
-                <div className="absolute md:bottom-4 -bottom-56 md:right-8 right-4 z-50" style={{ "--t": "16s", animation: "fadeInUp 1s ease forwards", animationDelay: "16s", opacity: 0 }}>
+                <div className="absolute md:bottom-4 bottom-[100px] md:right-8 right-2 z-50 flex justify-center w-full md:w-auto" style={{ "--t": "16s", animation: "fadeInUp 1s ease forwards", animationDelay: "16s", opacity: 0 }}>
                     <div style={{
                         background: 'linear-gradient(135deg, #fff5f5, #ffe0e0)',
                         border: '2px solid #e53e3e',
                         borderRadius: '12px',
-                        padding: '14px 18px',
-                        maxWidth: '280px',
+                        padding: '12px 16px',
+                        maxWidth: '250px',
                         boxShadow: '0 4px 15px rgba(229, 62, 62, 0.25)',
                         fontFamily: '"Sriracha", cursive',
                         position: 'relative',
