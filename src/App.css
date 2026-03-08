@@ -999,3 +999,15 @@ body {
     animation: popInAndFloat 1.0s ease-out 16.0s forwards;
     transform: translateY(310px);
 }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

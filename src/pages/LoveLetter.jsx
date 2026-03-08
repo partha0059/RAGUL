@@ -1,46 +1,49 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { useNavigate } from 'react-router'
+import { GiCrossMark } from 'react-icons/gi'
 
 const LoveLetter = () => {
+    const navigate = useNavigate();
     const lettersData = [
         {
-            id: 1,
-            name: "Rexon",
-            msg: "Wish you the happiest birthday",
-        },
-        {
-            id: 2,
-            name: "Rexon",
-            msg: "One picture from you can change my whole day, my whole mood, my whole heartbeat.",
-        },
-        {
-            id: 3,
-            name: "Rexon",
-            msg: "Even through screens and pixels, your laugh reaches me like sunlight through a window—warm, real, and impossible to forget.",
-        },
-        {
-            id: 4,
-            name: "Rexon",
-            msg: "Every notification from you feels like a heartbeat whispering, I’m here, and I love you.",
-        },
-        {
-            id: 5,
-            name: "Rexon",
-            msg: "Our messages might travel through wires, but every word you send lands straight in my heart.",
-        },
-        {
-            id: 6,
-            name: "Rexon",
-            msg: "Ever since our we met, my heart knew where it wanted to stay— with you, in every soft moment, every smile, every quiet piece of forever.",
+            id: 8,
+            name: "Sarathi ❤️",
+            msg: "Life is full of random moments. But meeting you was never random for my heart. So today, I just want to ask you something simple… Will you be my Valentine, the girl my heart chooses today, tomorrow, and every day after?",
         },
         {
             id: 7,
-            name: "Rexon",
-            msg: " but you turned it into a memory my heart refuses to forget. Since then, every moment with you has felt softer, brighter, and filled with a kind of peace only you bring.",
+            name: "Sarathi",
+            msg: "In my heart there is no ego, no jealousy, and no betrayal. Only a pure heart that loves you. You are the only girl I talk to, laugh with, and share my happiness with. For me… there is only you.",
         },
         {
-            id: 8,
-            name: "Rexon",
-            msg: "Since our first conversation, you’ve been the quiet spark that changed my world, turning ordinary days into moments that feel beautifully meant to be.",
+            id: 6,
+            name: "Sarathi",
+            msg: "I promise you something from my heart. I will always respect you, care for you, and protect your heart. Your happiness will always matter more than my ego or pride. Because loving you means choosing you every day.",
+        },
+        {
+            id: 5,
+            name: "Sarathi",
+            msg: "You're not just someone who came into my life. You are my life and my everything. Your smile, your happiness, and your peace mean more to me than anything else in this world.",
+        },
+        {
+            id: 4,
+            name: "Sarathi",
+            msg: "Then came the day we met. Walking together, traveling, watching a movie… and seeing you in front of me felt unreal. That day you looked so beautiful… like an angel who quietly walked into my life.",
+        },
+        {
+            id: 3,
+            name: "Sarathi",
+            msg: "Day by day, our bond started growing. From simple chats… to laughter… to caring about each other's day. Without even noticing, you slowly became someone very special to me.",
+        },
+        {
+            id: 2,
+            name: "Sarathi",
+            msg: "For almost two years, I waited for the right person to enter my life. And then you came. It didn't take months for me to realize… within one day, something in my heart already chose you.",
+        },
+        {
+            id: 1,
+            name: "Sarathi",
+            msg: "It all started with a simple message. Two random people talking because of a small doubt and a project. But that one message quietly started something beautiful in my life.",
         },
     ];
     const [openEnvelope, setOpenEnvelope] = useState(false);
@@ -76,6 +79,7 @@ const LoveLetter = () => {
         letterEl.style.top = `${startTop}px`;
         letterEl.style.margin = 0;
         letterEl.style.zIndex = zIndexCounter;
+        setZIndexCounter(prev => prev + 1);
 
         const moveAt = (posX, posY) => {
             letterEl.style.left = `${posX - offsetX}px`;
@@ -114,6 +118,10 @@ const LoveLetter = () => {
 
     return (
         <main className='munna bg-[#8b0000] h-screen w-full overflow-hidden'>
+            {/* Close button to go back to main page */}
+            <div onClick={() => navigate('/')} className="crossAll" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 999999 }}>
+                <GiCrossMark className="text-white" />
+            </div>
             <section className="munna cssletter z-10">
                 <div className={`envelope ${openEnvelope ? "active" : ""}`}>
                     <button
@@ -127,7 +135,7 @@ const LoveLetter = () => {
                     <div className="munna envelope-flap text-black relative">
                         <div className='munna absolute left-1/2 top-[20%] -translate-x-1/2 flex items-center justify-center flex-col md:gap-y-2'>
                             <span className='munna font-sriracha md:text-2xl text-lg'>Envelope Of Love</span>
-                            <span className='munna font-dancingScript md:text-3xl text-xl'>Dear Trisha</span>
+                            <span className='munna font-dancingScript md:text-3xl text-xl'>From Sarathi</span>
                         </div>
                     </div>
                     <div className="munna envelope-folds">
@@ -162,7 +170,7 @@ const LoveLetter = () => {
                                 Close {letter.name}'s letter
                             </button>
                             <p>{letter.msg}</p>
-                            <cite>{letter.name}</cite>
+                            <cite>— {letter.name}</cite>
                         </blockquote>
                     ))}
                 </div>
@@ -200,7 +208,8 @@ const LoveLetter = () => {
                     <img src="https://i.pinimg.com/originals/96/c7/8b/96c78bc8ab873498b763798793d64f62.png" width="25" />
                 </div>
                 <div className="munna snowflake">
-                    <img src="https://i.pinimg.com/originals/96/c7/8b/96c78bc8ab873498b763798793d64f62.png" width="25" />  </div>
+                    <img src="https://i.pinimg.com/originals/96/c7/8b/96c78bc8ab873498b763798793d64f62.png" width="25" />
+                </div>
                 <div className="munna snowflake">
                     <img src="https://i.pinimg.com/originals/96/c7/8b/96c78bc8ab873498b763798793d64f62.png" width="25" />
                 </div>

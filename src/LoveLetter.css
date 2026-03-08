@@ -502,3 +502,72 @@
         transform: scale(1.1);
     }
 }
+
+/* --- Letter fade-in/out animation --- */
+@keyframes letterFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes letterFadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+}
+
+.letter-fade-in {
+    animation: letterFadeIn 0.4s ease forwards;
+}
+
+.letter-fade-out {
+    animation: letterFadeOut 0.35s ease forwards;
+}
+
+/* --- Navigation buttons for letters --- */
+.letter-nav-btn {
+    font-size: 14px !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    background: rgba(139, 0, 0, 0.15) !important;
+    border: 1px solid rgba(139, 0, 0, 0.3) !important;
+    border-radius: 20px !important;
+    padding: 8px 20px !important;
+    color: var(--letter-text) !important;
+    font-family: var(--letter-font) !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: none !important;
+}
+
+.letter-nav-btn:hover:not(:disabled) {
+    background: rgba(139, 0, 0, 0.25) !important;
+    transform: none !important;
+}
+
+.letter-nav-btn::before {
+    content: none !important;
+}
+
+.letter-nav-btn:hover::before,
+.letter-nav-btn:active::before,
+.letter-nav-btn:focus::before {
+    content: none !important;
+}
+
+.letter-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+}

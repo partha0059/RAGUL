@@ -27,7 +27,21 @@ const App = () => {
   const [showContent, setShowContent] = useState(false);
   const [animateOut, setAnimateOut] = useState(false); // New state for animation
 
+  const [isPlaying, setIsPlaying] = useState(false);
+
   useEffect(() => {
+    const playAudio = () => {
+      if (!isPlaying) {
+        const audio = document.getElementById("bg-music");
+        if (audio) {
+          audio.play().catch(e => console.log("Autoplay blocked:", e));
+          setIsPlaying(true);
+        }
+      }
+    };
+
+    document.addEventListener('click', playAudio);
+
     const handlePageLoad = () => {
       setTimeout(() => setAnimateOut(true), 8400);
       setTimeout(() => setLoading(false), 9000);
@@ -40,17 +54,21 @@ const App = () => {
       window.addEventListener("load", handlePageLoad);
     }
 
-    return () => window.removeEventListener("load", handlePageLoad);
-  }, []);
+    return () => {
+      window.removeEventListener("load", handlePageLoad);
+      document.removeEventListener('click', playAudio);
+    }
+  }, [isPlaying]);
 
   return (
     <>
       {
-        loading && <OpeningAnimation animateOut={animateOut}/>
+        loading && <OpeningAnimation animateOut={animateOut} />
       }
       {
         showContent && <RouterProvider router={MyRoute} />
       }
+      <audio id="bg-music" autoPlay loop src="/song.m4a" style={{ display: 'none' }}></audio>
     </>
   )
 }
