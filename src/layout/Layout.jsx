@@ -5,8 +5,9 @@ import HeartTransition from '../components/HeartTransition'
 const Layout = () => {
   return (
     <>
-        <HeartTransition />
+      <HeartTransition>
         <Outlet />
+      </HeartTransition>
     </>
   )
 }

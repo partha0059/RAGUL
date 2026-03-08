@@ -5,20 +5,25 @@ import { useLocation } from 'react-router';
 const HeartTransition = ({ children }) => {
     const location = useLocation();
     const [loading, setLoading] = useState(true);
-    const isInitialMount = useRef(true); 
+    const isInitialMount = useRef(true);
 
     useEffect(() => {
-        if (isInitialMount.current) {
-            isInitialMount.current = false; 
-            const minTime = new Promise(res => setTimeout(res, 100));
-            Promise.all([minTime]).then(() => setLoading(false));
-
+        if (location.pathname === '/' && isInitialMount.current) {
+            isInitialMount.current = false;
+            setLoading(false);
             return;
         }
+        isInitialMount.current = false;
 
         setLoading(true);
-        const minTime = new Promise(res => setTimeout(res, 7000));
-        const loadDone = new Promise(res => window.requestIdleCallback(res, { timeout: 2000 }));
+        const minTime = new Promise(res => setTimeout(res, 2500));
+        const loadDone = new Promise(res => {
+            if (window.requestIdleCallback) {
+                window.requestIdleCallback(res, { timeout: 2000 });
+            } else {
+                setTimeout(res, 500);
+            }
+        });
 
         Promise.all([minTime, loadDone]).then(() => setLoading(false));
     }, [location.pathname]);
