@@ -68,7 +68,7 @@ const App = () => {
       {
         showContent && <RouterProvider router={MyRoute} />
       }
-      <audio id="bg-music" autoPlay loop src="/song.m4a" style={{ display: 'none' }}></audio>
+      <audio id="bg-music" autoPlay loop src="/song.webm" style={{ display: 'none' }}></audio>
     </>
   )
 }

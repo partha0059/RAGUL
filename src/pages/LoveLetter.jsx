@@ -7,43 +7,43 @@ const LoveLetter = () => {
     const lettersData = [
         {
             id: 8,
-            name: "Sarathi ❤️",
-            msg: "Life is full of random moments. But meeting you was never random for my heart. So today, I just want to ask you something simple… Will you be my Valentine, the girl my heart chooses today, tomorrow, and every day after?",
+            name: "Your Love ❤️",
+            msg: "My love for you grows stronger with every passing day. You are the light that guides me through my darkest moments, and the reason my heart beats so fast.",
         },
         {
             id: 7,
-            name: "Sarathi",
-            msg: "In my heart there is no ego, no jealousy, and no betrayal. Only a pure heart that loves you. You are the only girl I talk to, laugh with, and share my happiness with. For me… there is only you.",
+            name: "Your Love",
+            msg: "Every time I look into your eyes, I see a lifetime of happiness, peace, and love. You are everything I've ever wanted, and so much more.",
         },
         {
             id: 6,
-            name: "Sarathi",
-            msg: "I promise you something from my heart. I will always respect you, care for you, and protect your heart. Your happiness will always matter more than my ego or pride. Because loving you means choosing you every day.",
+            name: "Your Love",
+            msg: "No matter where life takes us, I want you to know that my heart belongs to you forever. You are my home, my safe place, and my greatest adventure.",
         },
         {
             id: 5,
-            name: "Sarathi",
-            msg: "You're not just someone who came into my life. You are my life and my everything. Your smile, your happiness, and your peace mean more to me than anything else in this world.",
+            name: "Your Love",
+            msg: "I promise to always stand by your side, to hold your hand through the good times and the bad, and to love you unconditionally every single day.",
         },
         {
             id: 4,
-            name: "Sarathi",
-            msg: "Then came the day we met. Walking together, traveling, watching a movie… and seeing you in front of me felt unreal. That day you looked so beautiful… like an angel who quietly walked into my life.",
+            name: "Your Love",
+            msg: "Your smile is my favorite thing in the world. It lights up my day and brings so much joy to my life. I never want to see you without it.",
         },
         {
             id: 3,
-            name: "Sarathi",
-            msg: "Day by day, our bond started growing. From simple chats… to laughter… to caring about each other's day. Without even noticing, you slowly became someone very special to me.",
+            name: "Your Love",
+            msg: "Thank you for being you. Thank you for loving me the way you do. I am so incredibly blessed to have you in my life, today and always.",
         },
         {
             id: 2,
-            name: "Sarathi",
-            msg: "For almost two years, I waited for the right person to enter my life. And then you came. It didn't take months for me to realize… within one day, something in my heart already chose you.",
+            name: "Your Love",
+            msg: "I cherish every moment we spend together. You make me a better person, and I can't imagine my life, or my future, without you in it.",
         },
         {
             id: 1,
-            name: "Sarathi",
-            msg: "It all started with a simple message. Two random people talking because of a small doubt and a project. But that one message quietly started something beautiful in my life.",
+            name: "Your Love",
+            msg: "You are the missing piece to my puzzle, the melody to my song, and the true love of my life. I will love you endlessly, tomorrow, and forever.",
         },
     ];
     const [openEnvelope, setOpenEnvelope] = useState(false);
@@ -135,7 +135,7 @@ const LoveLetter = () => {
                     <div className="munna envelope-flap text-black relative">
                         <div className='munna absolute left-1/2 top-[20%] -translate-x-1/2 flex items-center justify-center flex-col md:gap-y-2'>
                             <span className='munna font-sriracha md:text-2xl text-lg'>Envelope Of Love</span>
-                            <span className='munna font-dancingScript md:text-3xl text-xl'>From Sarathi</span>
+                            <span className='munna font-dancingScript md:text-3xl text-xl'>From Your Love</span>
                         </div>
                     </div>
                     <div className="munna envelope-folds">

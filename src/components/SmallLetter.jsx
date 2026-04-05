@@ -78,7 +78,7 @@ const SmallLetter = () => {
                         >
                             x
                         </div>
-                        <p>Dear Srudhi,<br /><br />Happy Birthday my love ❤️<br />No matter what life brings,<br />or what anyone says,<br />my heart will always<br />choose only you.<br /><br />Sarathi</p>
+                        <p>My Beautiful Love,<br /><br />🎂 Happy Birthday my love 💖<br /><br />I never thought you would become this important to me…<br />now it feels like I’m nothing without you 🥺<br /><br />You are the most beautiful part of my life ❤️<br /><br />Yours Forever</p>
                     </div>
 
                     {/* --- NEW SVG DIARY PAGE DECORATION --- */}
