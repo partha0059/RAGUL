@@ -7,42 +7,42 @@ const LoveLetter = () => {
     const lettersData = [
         {
             id: 8,
-            name: "Your Love ❤️",
+            name: "Ragul ❤️",
             msg: "My love for you grows stronger with every passing day. You are the light that guides me through my darkest moments, and the reason my heart beats so fast.",
         },
         {
             id: 7,
-            name: "Your Love",
+            name: "Ragul",
             msg: "Every time I look into your eyes, I see a lifetime of happiness, peace, and love. You are everything I've ever wanted, and so much more.",
         },
         {
             id: 6,
-            name: "Your Love",
+            name: "Ragul",
             msg: "No matter where life takes us, I want you to know that my heart belongs to you forever. You are my home, my safe place, and my greatest adventure.",
         },
         {
             id: 5,
-            name: "Your Love",
+            name: "Ragul",
             msg: "I promise to always stand by your side, to hold your hand through the good times and the bad, and to love you unconditionally every single day.",
         },
         {
             id: 4,
-            name: "Your Love",
+            name: "Ragul",
             msg: "Your smile is my favorite thing in the world. It lights up my day and brings so much joy to my life. I never want to see you without it.",
         },
         {
             id: 3,
-            name: "Your Love",
+            name: "Ragul",
             msg: "Thank you for being you. Thank you for loving me the way you do. I am so incredibly blessed to have you in my life, today and always.",
         },
         {
             id: 2,
-            name: "Your Love",
+            name: "Ragul",
             msg: "I cherish every moment we spend together. You make me a better person, and I can't imagine my life, or my future, without you in it.",
         },
         {
             id: 1,
-            name: "Your Love",
+            name: "Ragul",
             msg: "You are the missing piece to my puzzle, the melody to my song, and the true love of my life. I will love you endlessly, tomorrow, and forever.",
         },
     ];
@@ -135,7 +135,7 @@ const LoveLetter = () => {
                     <div className="munna envelope-flap text-black relative">
                         <div className='munna absolute left-1/2 top-[20%] -translate-x-1/2 flex items-center justify-center flex-col md:gap-y-2'>
                             <span className='munna font-sriracha md:text-2xl text-lg'>Envelope Of Love</span>
-                            <span className='munna font-dancingScript md:text-3xl text-xl'>From Your Love</span>
+                            <span className='munna font-dancingScript md:text-3xl text-xl'>From Ragul</span>
                         </div>
                     </div>
                     <div className="munna envelope-folds">

@@ -29,7 +29,7 @@ const BookCanvas = ({ active, setActive }) => {
                 <div className="card1">
                     <div className="cover-text-wrapper">
                         <h4 className="username">
-                            My Dearest Love<span className="underline"></span>
+                            Dear Ram prabha<span className="underline"></span>
                         </h4>
                         <h3 className="cover-title">
                             Happy Birthday!
@@ -93,7 +93,7 @@ const BookCanvas = ({ active, setActive }) => {
                         <div className="confetti-dots"></div>
 
                         <p className="signature" style={{ marginTop: '5px' }}>
-                            Forever Yours ❤️
+                            Forever Yours, Ragul ❤️
                         </p>
                     </div>
                 </div>
